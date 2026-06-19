@@ -553,3 +553,5 @@ async def get_metrics():
     """Gets dashboard execution performance metrics."""
     summary = get_metrics_summary()
     return {"metrics": summary}
+
+# SSE token streaming optimized
