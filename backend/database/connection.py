@@ -133,3 +133,5 @@ def close_pool():
         logger.info("Closing PostgreSQL connection pool...")
         pool.close()
         pool = None
+
+# Checkpointer pool connection optimized
