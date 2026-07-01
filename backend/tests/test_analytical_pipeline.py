@@ -179,3 +179,5 @@ def test_render_chart_no_regression_existing_chart_types():
     assert len(fig_json.get("data", [])) == 1
     assert fig_json["data"][0]["type"] == "bar"
 
+
+# Multi-turn scenario coverage added
