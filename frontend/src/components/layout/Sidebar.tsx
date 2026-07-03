@@ -97,7 +97,7 @@ export function Sidebar({
         </div>
         <div className="min-w-0 flex-1 flex items-center justify-between">
           <div>
-            <div className="truncate text-sm font-semibold tracking-tight">DataAgent Pro</div>
+            <div className="truncate text-sm font-semibold tracking-tight">GraphAnalyst</div>
             <div className="truncate text-[11px] text-muted-foreground">Autonomous analyst</div>
           </div>
           <button

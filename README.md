@@ -2,241 +2,298 @@
 
 # GraphAnalyst
 
-### Stateful Multi-Agent Data Analysis with LangGraph
+### Stateful Multi-Agent Data Intelligence Engine with LangGraph, DuckDB & MCP
 
-> **An Agentic AI Data Analysis System for Reliable Analytical Workflows**
+> **An enterprise-grade autonomous data analytics system engineered for deterministic reasoning, robust validation, and self-healing query execution.**
 
-Analyze CSV datasets using natural language through a **stateful LangGraph workflow** that combines **LLM reasoning**, **deterministic execution**, **safe validation**, and **interactive visualizations**.
-
-Generate grounded analytical insights with validated SQL, Python execution, and persistent conversational memory.
+Analyze tabular datasets using natural language through a **stateful LangGraph multi-agent topology** that orchestrates **LLM reasoning**, **isolated in-memory SQL execution (DuckDB)**, **AST-level code safety validation**, and **interactive Plotly visualizations**.
 
 <br>
 
-![Python](https://img.shields.io/badge/PYTHON-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Python](https://img.shields.io/badge/PYTHON-3.11+-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![FastAPI](https://img.shields.io/badge/FASTAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
-![React](https://img.shields.io/badge/REACT-61DAFB?style=for-the-badge&logo=react&logoColor=black)
+![React](https://img.shields.io/badge/REACT-19-61DAFB?style=for-the-badge&logo=react&logoColor=black)
 ![TypeScript](https://img.shields.io/badge/TYPESCRIPT-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
-![LangGraph](https://img.shields.io/badge/LANGGRAPH-000000?style=for-the-badge)
-![AGENTIC AI](https://img.shields.io/badge/AGENTIC_AI-8A2BE2?style=for-the-badge)
-![DuckDB](https://img.shields.io/badge/DUCKDB-FFF000?style=for-the-badge&logo=duckdb&logoColor=black)
-![PostgreSQL](https://img.shields.io/badge/POSTGRESQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
-
-<br>
-
-![Plotly](https://img.shields.io/badge/PLOTLY-3F4F75?style=for-the-badge&logo=plotly&logoColor=white)
-![MCP](https://img.shields.io/badge/MCP-FF6B35?style=for-the-badge)
-![SQL-DuckDB](https://img.shields.io/badge/SQL-DUCKDB-FACC15?style=for-the-badge)
-![Docker](https://img.shields.io/badge/DOCKER-2496ED?style=for-the-badge&logo=docker&logoColor=white)
-![MIT](https://img.shields.io/badge/LICENSE-MIT-97CA00?style=for-the-badge)
+![LangGraph](https://img.shields.io/badge/LANGGRAPH-Stateful_Agents-000000?style=for-the-badge)
+![DuckDB](https://img.shields.io/badge/DUCKDB-Analytical_Engine-FFF000?style=for-the-badge&logo=duckdb&logoColor=black)
+![PostgreSQL](https://img.shields.io/badge/POSTGRESQL-Checkpointer-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
+![MCP](https://img.shields.io/badge/MCP-Protocol_Tools-FF6B35?style=for-the-badge)
+![License](https://img.shields.io/badge/LICENSE-MIT-97CA00?style=for-the-badge)
 
 </div>
 
 ---
 
-## 📸 Product Preview
+## 1. Product Walkthrough
 
-The following screenshots demonstrate the complete workflow—from dataset upload and conversational analysis to validated results, interactive visualizations, generated SQL, and execution analytics.
+GraphAnalyst provides an end-to-end analytical workflow from CSV ingestion to multi-turn natural language exploration, deterministic computations, dynamic charting, and diagnostic telemetry.
 
-### 1. Dataset Upload
-Upload a CSV dataset to start a new analysis session. The agent automatically profiles the dataset, identifies its schema, and prepares it for downstream analytical tasks.
+### 1.1 Dataset Upload & Automated Schema Profiling
+Upload arbitrary CSV datasets. GraphAnalyst profiles column data types, computes null cardinality, extracts statistical distributions, and registers an isolated DuckDB table instance for query operations.
 <p align="center">
-  <img src="./screenshots/Dataset Uploading Page.png" width="90%">
+  <img src="./screenshots/Dataset Uploading Page.png" alt="Dataset Upload and Schema Profiling" width="92%">
 </p>
 
 ---
 
-### 2. Main Analysis Workspace
-The primary workspace where users ask analytical questions in natural language. The agent plans the workflow, generates SQL or Python when required, validates execution, and presents grounded analytical results in real time.
+### 1.2 Main Analysis Workspace
+Users issue natural language analytical questions. The LangGraph Supervisor delegates requests across specialized agent nodes, producing SQL queries, validating data integrity, and streaming grounded reports.
 <p align="center">
-  <img src="./screenshots/Main Workspace.png" width="90%">
+  <img src="./screenshots/Main Workspace.png" alt="Main Analysis Workspace" width="92%">
 </p>
 
 ---
 
-### 3. Example Analysis — Monthly Sales Trend
-A complete analytical report including:
-- Executive Summary
-- Query Results
-- Interactive Visualization
-- Statistical Insights
+### 1.3 Analytical Query Output & Dynamic Visualizations
+Full executive summaries accompanied by generated SQL, tabular query outputs, statistical distributions, and interactive Plotly visual charts.
 <p align="center">
-  <img src="./screenshots/q1.jpg" width="90%">
+  <img src="./screenshots/q1.jpg" alt="Analytical Report and Visualization" width="92%">
 </p>
 
 ---
 
-### 4. Conversational Follow-up Analysis
-The agent maintains conversation state using LangGraph checkpointing, allowing follow-up questions without re-uploading the dataset.
-
-Example:
-> *"Show the top 3"*
-
-The system automatically understands the previous analytical context.
+### 1.4 Multi-Turn Conversational Memory & Contextual Follow-ups
+Powered by PostgreSQL-backed LangGraph state checkpointing, GraphAnalyst retains full contextual history across turns (e.g., *"Show the top 3"*, *"Break this down by region"*) without reprocessing the initial prompt.
 <p align="center">
-  <img src="./screenshots/q2.png" width="90%">
+  <img src="./screenshots/q2.png" alt="Conversational Contextual Follow-up" width="92%">
 </p>
 
 ---
 
-### 5. Explainable AI & Debug Information
-Every analytical result is fully transparent. The agent exposes:
-- Generated SQL
-- LLM reasoning
-- Execution plan
-- Runtime metadata
+### 1.5 Explainable AI, Execution Plans & Diagnostics
+Full visibility into LLM thought processes, generated SQL syntax, AST validation status, DuckDB execution latency, and token consumption.
 <p align="center">
-  <img src="./screenshots/Q 4.2.png" width="90%">
+  <img src="./screenshots/Q 4.2.png" alt="Explainable AI and Diagnostics" width="92%">
 </p>
 
 ---
 
-### 6. Analytics & Observability Dashboard
-The built-in analytics dashboard tracks system performance, execution latency, retry rates, recovery statistics, and historical execution metrics.
+### 1.6 Observability, Health & Performance Dashboard
+Integrated observability console tracking system throughput, query retry frequencies, node transition latencies, and agent success rates.
 <p align="center">
-  <img src="./screenshots/Analystics.png" width="90%">
+  <img src="./screenshots/Analystics.png" alt="Observability Dashboard" width="92%">
 </p>
 
 ---
 
-## 💡 Why This Project is Different
+## 2. Core Architectural Differentiators
 
-Many AI data analysis tools primarily generate SQL or Python using an LLM and return the result directly. GraphAnalyst combines **LLM reasoning** with **deterministic execution**, **stateful workflows**, and **validation pipelines** to produce reliable analytical results.
+Most AI data assistants rely on naive single-shot LLM code generation, which frequently hallucinates aggregations, produces dangerous code, or crashes on SQL syntax errors. GraphAnalyst separates **analytical reasoning** from **deterministic computation**.
 
-| Capability | Typical AI Data Assistant | GraphAnalyst |
+| Engineering Dimension | Traditional Text-to-SQL / Chatbots | GraphAnalyst Architecture |
 | :--- | :--- | :--- |
-| **Workflow** | Single-step LLM response | **Stateful LangGraph multi-agent workflow** |
-| **Calculations** | Performed or generated by the LLM | **Executed deterministically using DuckDB, Pandas & NumPy** |
-| **Conversation Memory** | Limited chat history | **Persistent LangGraph checkpoints with PostgreSQL** |
-| **Error Recovery** | Stops on failures | **Validation, reflection, and automatic retries** |
-| **Execution Safety** | Limited validation | **SQL validation and Python AST security checks** |
-| **Explainability** | Final answer only | **Generated SQL, execution plan, reasoning, and reports** |
-| **Observability** | Minimal execution visibility | **Pipeline timeline, execution metrics, and analytics dashboard** |
-| **Tool Integration** | Direct tool calls | **MCP-based tool architecture with fallback support** |
+| **Workflow Coordination** | Linear single-prompt chain | **Stateful LangGraph multi-agent directed acyclic graph (DAG)** |
+| **Calculations & Math** | Computed / guessed by LLM | **Vectorized DuckDB in-memory execution + NumPy / Pandas** |
+| **Memory Persistence** | In-memory message list (ephemeral) | **PostgreSQL checkpointer preserving full graph state & thread history** |
+| **Error Recovery** | Fails outright on syntax or schema errors | **Self-correcting reflection loop with automated regeneration (up to 3 retries)** |
+| **Security & Guardrails** | Minimal or raw `exec()` evaluation | **Dual-layer validation: SQL AST parser + Python AST security inspector** |
+| **Tool Protocol** | Proprietary function calling | **Anthropic Model Context Protocol (MCP) server + local fallback bridge** |
+| **Observability** | Black-box output | **Fine-grained node telemetry, latency breakdown, and execution logs** |
 
 ---
 
-## 🛠️ Core Engineering Highlights
+## 3. System Architecture
 
-- **LangGraph Supervisor** — Routes requests to specialized workers for modular execution.
-- **Persistent Memory** — PostgreSQL checkpoints preserve conversation state across sessions.
-- **Safe Code Execution** — SQL validation and Python AST checks improve reliability and security.
-- **MCP Tool Integration** — Analytical capabilities are exposed through Model Context Protocol with automatic fallback to local implementations.
-- **Grounded AI Reports** — The LLM explains deterministic results instead of generating numbers.
-- **Session Isolation** — Each analysis runs in an independent DuckDB session with automatic cleanup.
-
----
-
-## 🧩 System Architecture
-
-GraphAnalyst follows a **stateful multi-agent architecture** built with **LangGraph**. A central Supervisor coordinates specialized workers for planning, execution, validation, visualization, and reporting, while PostgreSQL preserves workflow state across sessions.
+GraphAnalyst is built on a **Stateful Multi-Agent Supervisor Pattern**. The supervisor node inspects user intent, schema profile, and execution state to route execution dynamically to worker nodes.
 
 <p align="center">
-  <img src="./screenshots/System Architecture.png" alt="System Architecture" width="90%">
+  <img src="./screenshots/System Architecture.png" alt="System Architecture Diagram" width="92%">
 </p>
+
+### Multi-Agent Pipeline Nodes:
+1. **Supervisor Node**: Inspects user intent, session context, and schema to dynamically construct an execution plan.
+2. **Schema Profiler**: Extracts schema metadata, data types, null ratios, sample distributions, and categorical values.
+3. **Code Generator**: Generates standards-compliant DuckDB SQL queries or Python transformation scripts tailored to the schema.
+4. **Validator Node**: Runs AST security checks and syntax verification before permitting execution.
+5. **Execution Engine (Sandbox)**: Safely evaluates validated queries against the isolated DuckDB session.
+6. **Reflection & Retry Node**: Captures syntax errors, zero-row edge cases, or schema mismatches, injecting diagnostic feedback into the code generator for iterative correction.
+7. **Analysis Engine**: Synthesizes statistical insights and trend observations strictly grounded in the execution output.
+8. **Visualization Agent**: Selects chart types (bar, line, scatter, box, heatmap) and generates Plotly JSON specifications.
+9. **Report Agent**: Compiles executive summaries, structured key takeaways, and strategic recommendations into a unified payload.
 
 ---
 
-## 🔄 Validation, Reflection & Retry Loop
+## 4. Self-Healing Reflection & Retry Loop
 
-Every generated SQL or Python script is validated before execution. If validation fails or results are unreliable, the system automatically reflects on the failure, regenerates the query, and retries execution up to 3 times before returning a structured diagnostics report.
+When a generated query fails execution or fails schema checks, GraphAnalyst does not abort. It enters an automated reflection loop:
 
 <p align="center">
-  <img src="./screenshots/Validation.png" alt="Validation Reflection Retry Loop" width="90%">
+  <img src="./screenshots/Validation.png" alt="Validation Reflection Retry Loop" width="92%">
 </p>
 
----
-
-## ⚙️ Tech Stack
-
-| Category | Technologies |
-| :--- | :--- |
-| **Frontend** | React, TypeScript, Tailwind CSS, Vite |
-| **Backend** | FastAPI, Python |
-| **AI Framework** | LangGraph, LangChain |
-| **LLMs** | Groq (Llama 3.3 70B), Gemini 2.5 Flash |
-| **Database** | PostgreSQL, DuckDB |
-| **Data Processing** | Pandas, NumPy |
-| **Visualization** | Plotly |
-| **Reporting** | ReportLab |
-| **Tool Integration** | Model Context Protocol (MCP) |
-
----
-
-## 📁 Project Structure
-
-```text
-GraphAnalyst/
-├── backend/                # FastAPI + LangGraph workflow
-│   ├── agents/             # Multi-agent nodes, supervisor & state
-│   ├── database/           # DuckDB & PostgreSQL connections
-│   ├── mcp/                # Model Context Protocol tools & client
-│   ├── services/           # LLM, analysis & storage services
-│   └── utils/              # AST and SQL security validators
-├── frontend/               # React + Vite TypeScript application
-├── screenshots/            # Architectural diagrams & UI previews
-├── docker-compose.yml
-├── requirements.txt
-└── README.md
+```mermaid
+graph TD
+    A[Natural Language Query] --> B[Code Generator Node]
+    B --> C{SQL / AST Validator}
+    C -- Valid --> D[DuckDB Sandbox Execution]
+    C -- Malformed / Unsafe --> E[Reflection Node: Analyze Error]
+    D -- Execution Error / 0 Rows --> E
+    E --> F{Retry Count < 3?}
+    F -- Yes --> B
+    F -- No --> G[Structured Diagnostic Fallback]
+    D -- Success --> H[Analysis Engine & Visualization Node]
 ```
 
 ---
 
-## 🚀 Getting Started
+## 5. Security & AST-Level Code Sandboxing
 
-### 1. Clone the Repository
+To ensure complete safety when executing dynamic analytics:
+* **SQL Quality Validator**: Enforces strict read-only query semantics (`SELECT`, `WITH` CTEs), blocking destructive operations (`DROP`, `DELETE`, `UPDATE`, `ALTER`, `INSERT`).
+* **Python AST Inspector**: Analyzes abstract syntax trees of Python code to prohibit dangerous imports (`os`, `sys`, `subprocess`, `shutil`, `socket`) and malicious builtins (`eval`, `exec`, `__import__`).
+* **Process Isolation**: Each dataset session operates within its own dedicated DuckDB in-memory database with automatic memory cleanup.
 
+---
+
+## 6. Technology Stack
+
+| Layer | Component | Description |
+| :--- | :--- | :--- |
+| **Frontend** | React 19, TypeScript, Vite | Dark-first analytics workspace with real-time streaming UI |
+| **Styling** | Tailwind CSS, Radix UI, Lucide | Modern design system with responsive layouts and fluid state transitions |
+| **Visualizations** | Plotly.js | Interactive charts with zooming, panning, and dynamic theme synchronization |
+| **API Backend** | FastAPI, Uvicorn, Pydantic v2 | High-throughput asynchronous REST API and WebSocket/streaming endpoints |
+| **Agent Framework** | LangGraph, LangChain | Stateful multi-agent graph with dynamic routing and state persistence |
+| **LLM Inference** | Groq (Llama 3.3 70B), Gemini 2.5 Flash | High-speed analytical reasoning and grounded narrative generation |
+| **Execution Engine** | DuckDB, Pandas, NumPy | Vectorized in-memory analytical SQL database for ultra-fast query processing |
+| **State Store** | PostgreSQL | Robust thread checkpointer preserving conversation state across sessions |
+| **Tool Protocol** | FastMCP (Model Context Protocol) | Standardized tool integration layer with fallback handlers |
+| **Reporting** | ReportLab | Automated PDF analytical report generation with embedded visuals |
+
+---
+
+## 7. Project Structure
+
+```text
+GraphAnalyst/
+├── backend/
+│   ├── agents/
+│   │   ├── nodes/
+│   │   │   ├── analysis_engine.py       # Insight synthesis node
+│   │   │   ├── code_generator.py        # SQL and Python generation
+│   │   │   ├── planner.py               # Analytical execution planning
+│   │   │   ├── python_analyst.py        # Python-based transformations
+│   │   │   ├── reflection.py            # Error diagnostics and feedback
+│   │   │   ├── report_agent.py          # Executive report composition
+│   │   │   ├── sandbox_executor.py      # DuckDB sandbox execution
+│   │   │   ├── schema_profiler.py       # Dataset profiling and schema extraction
+│   │   │   ├── supervisor.py            # LangGraph routing coordinator
+│   │   │   ├── validator.py             # AST syntax & safety validator
+│   │   │   ├── visualization_generator.py # Plotly visualization generation
+│   │   │   └── visualization_reflection.py# Chart validation & correction
+│   │   ├── capability_registry.py       # Dynamic agent skill registration
+│   │   ├── graph.py                     # LangGraph StateGraph assembly
+│   │   ├── sandbox.py                   # Secure execution sandbox
+│   │   ├── schemas.py                   # Data schemas and event models
+│   │   └── state.py                     # Overall multi-agent state definitions
+│   ├── database/
+│   │   ├── connection.py                # PostgreSQL & DuckDB connection pools
+│   │   └── repository.py                # Query history and session repositories
+│   ├── mcp/
+│   │   ├── client.py                    # Model Context Protocol client
+│   │   └── data_access.py               # MCP data access endpoints
+│   ├── mcp_server/
+│   │   └── server.py                    # FastMCP server for analytical tools
+│   ├── services/
+│   │   ├── pdf_generator.py             # PDF export and formatting
+│   │   ├── python/python_quality_validator.py # AST inspection for Python
+│   │   ├── reporting/                   # Report formatters and recommendation engine
+│   │   ├── session_manager.py           # Multi-tenant session state
+│   │   ├── sql/sql_quality_validator.py # Strict read-only SQL safety
+│   │   ├── statistics.py                # Statistical metric computations
+│   │   └── visualization/               # Chart selection and templates
+│   ├── tests/                           # Unit & integration test suites
+│   ├── config.py                        # Central settings and environment config
+│   └── main.py                          # FastAPI application entrypoint
+├── frontend/
+│   ├── src/
+│   │   ├── components/                  # UI components, layout, cards, Plotly charts
+│   │   ├── pages/                       # Workspace and Analytics dashboards
+│   │   ├── services/                    # API client and analytics endpoints
+│   │   ├── types/                       # TypeScript analytical interfaces
+│   │   ├── App.tsx                      # Root component and navigation
+│   │   └── index.css                    # Design tokens and styles
+│   ├── index.html                       # HTML5 template
+│   ├── package.json                     # Frontend dependencies
+│   └── vite.config.ts                   # Vite build configuration
+├── screenshots/                         # Architectural diagrams and application previews
+├── docker-compose.yml                   # PostgreSQL container configuration
+├── requirements.txt                     # Backend Python dependencies
+└── README.md                            # Project documentation
+```
+
+---
+
+## 8. Getting Started
+
+### Prerequisites
+* Python 3.11+
+* Node.js 18+ and npm
+* Docker & Docker Compose (for PostgreSQL checkpointing)
+
+### 8.1 Clone the Repository
 ```bash
 git clone https://github.com/Namanbansal43/GraphAnalyst.git
 cd GraphAnalyst
 ```
 
-### 2. Start PostgreSQL
-
+### 8.2 Start Database Services
 ```bash
 docker-compose up -d
 ```
 
-### 3. Backend Setup
-
+### 8.3 Backend Setup
 ```bash
+# Create and activate virtual environment
 python -m venv .venv
 
-# Activate environment
 # Windows
 .venv\Scripts\activate
-# Linux / macOS
+# macOS / Linux
 source .venv/bin/activate
 
+# Install dependencies
 pip install -r requirements.txt
+
+# Configure environment variables
 cp .env.example .env
 ```
 
-Configure your API keys inside `.env` and start the backend:
-
+Add your API keys (`GROQ_API_KEY`, `GEMINI_API_KEY`, `DATABASE_URL`) to `.env`, then start the FastAPI server:
 ```bash
-uvicorn backend.main:app --reload
+uvicorn backend.main:app --reload --port 8000
 ```
 
-### 4. Frontend Setup
-
+### 8.4 Frontend Setup
 ```bash
 cd frontend
 npm install
 npm run dev
 ```
 
-Open:
-- Frontend: `http://localhost:5173`
-- Backend: `http://localhost:8000`
+Open your browser:
+* **Frontend Application**: `http://localhost:5173`
+* **FastAPI Swagger Docs**: `http://localhost:8000/docs`
 
 ---
 
-## 📄 License
+## 9. Running Tests
+
+```bash
+# Execute backend test suite
+pytest backend/tests -v
+```
+
+---
+
+## 10. License
 
 This project is licensed under the **MIT License**.
 
 ---
 
-## 👤 Author
+## 11. Author
 
-**Naman Bansal**
+**Naman Bansal**  
+* GitHub: [@Namanbansal43](https://github.com/Namanbansal43)  
+* Email: [namanbansal937@gmail.com](mailto:namanbansal937@gmail.com)

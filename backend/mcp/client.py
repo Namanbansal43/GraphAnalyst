@@ -18,7 +18,7 @@ async def invoke_mcp_tool(tool_name: str, kwargs: Dict[str, Any]) -> Optional[Di
     server_path = Path(__file__).parent.parent / "mcp_server" / "server.py"
     
     config = {
-        "dataagent_tools": {
+        "graphanalyst_tools": {
             "command": sys.executable,
             "args": [str(server_path.resolve())],
             "transport": "stdio"

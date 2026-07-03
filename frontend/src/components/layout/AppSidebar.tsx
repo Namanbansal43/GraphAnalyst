@@ -94,7 +94,7 @@ export function AppSidebar({
                 <Sparkles className="h-4 w-4 text-primary-foreground" />
               </div>
               <div className="min-w-0">
-                <div className="truncate text-sm font-semibold tracking-tight">DataAgent Pro</div>
+                <div className="truncate text-sm font-semibold tracking-tight">GraphAnalyst</div>
                 <div className="truncate text-[11px] text-muted-foreground">Autonomous analyst</div>
               </div>
             </div>

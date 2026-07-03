@@ -10,7 +10,7 @@ async def test_mcp_tool_discovery():
     import sys
     server_path = Path(__file__).parent.parent.parent / "backend" / "mcp_server" / "server.py"
     config = {
-        "dataagent_tools": {
+        "graphanalyst_tools": {
             "command": sys.executable,
             "args": [str(server_path.resolve())],
             "transport": "stdio"

@@ -15,7 +15,7 @@ from backend.services.session_manager import session_manager
 
 logger = logging.getLogger(__name__)
 
-mcp = FastMCP("DataAgentTools")
+mcp = FastMCP("GraphAnalystTools")
 
 @mcp.tool()
 def get_dataset_schema(session_id: str, dataset_id: str) -> str:

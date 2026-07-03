@@ -257,7 +257,7 @@ export const Workspace: React.FC<WorkspaceProps> = ({
                     model={latestModel}
                   />
                   <div className="mt-2 text-center text-[10px] text-muted-foreground">
-                    DataAgent Pro can make mistakes. Always verify critical decisions.
+                    GraphAnalyst can make mistakes. Always verify critical decisions.
                   </div>
                 </div>
               </div>
